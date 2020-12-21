@@ -1,7 +1,7 @@
 # Personal Blog Website
 
 ## About the project
-This is a simple blog website made as a submission for Project 1 of Udacity's Front end Developer Nanodegree.
+This is a simple blog website made as a simple exercise in html and css.
 
 ## License
 Not for commercial use.
