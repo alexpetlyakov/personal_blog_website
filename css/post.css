@@ -1,0 +1,114 @@
+.postOuterContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas: 
+    "hr"
+    "main"
+    "fr";
+    height: 100vh;
+}
+
+.postInnerContainer {
+    display: grid;
+    grid-template-columns: 1fr 15vw;
+    padding: 10px;
+    grid-template-areas: 
+    "main main main main main archive";
+}
+
+.postContent {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: main;
+    align-items: start;
+    align-content: start;
+}
+
+.postHeader {
+    margin-bottom: 10px;
+}
+
+#socialNetwork {
+    width: 20px;
+}
+
+.postOpening {
+    margin-bottom: 10px;
+}
+
+.postMain {
+    margin-bottom: 10px;
+}
+
+.postClosure {
+    margin-bottom: 10px;
+}
+
+
+.bodyImgContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bodyImg {
+    width: 80%;
+    margin: auto;
+}
+
+.quote {
+    font-family: RobotoItalic;
+}
+
+.homeRedir {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.archive {
+    padding: 10px;
+    grid-area: archive;
+}
+
+#morePosts {
+    background-color: #00dcfa;
+    color: #3c3c3c;
+    border-radius: 15%;
+    border: none;
+    width: 16vw;
+    height: 3vh;
+    font-family: Roboto;
+    font-size: 0.9em;
+}
+
+#morePosts:hover {
+    background-color: #0000c0;
+    color: white;
+}
+
+@media(max-width: 600px) {
+    /* hiding archive for smaller screens */
+    .archive {
+        display: none;
+        padding: 10px;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 1200px){
+    #morePosts {
+        width: 12vw;
+    }
+}
+
+@media(min-width: 1200px){
+    #morePosts {
+        width: 10vw;
+    }
+}

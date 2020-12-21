@@ -1,0 +1,8 @@
+.missingPost {
+    display: flex;
+    flex-direction: column;
+}
+.missingPost h1 {
+    text-align: center;
+    color: #0000c0;
+}
