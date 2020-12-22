@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8"/>
         <title>Blog Post</title>
@@ -12,7 +12,7 @@
         <div class="header">
             <a id="sub" href="http://feeds.bbci.co.uk/news/world/rss.xml">Subscribe</a>
             <a id="home" href="./index.html"><h1 id="siteTitle">Awesome Hardware News</h1></a>
-            <img id="search" src="./img/search.png"/>
+            <img id="search" src="./img/search.png" alt="Search Icon"/>
         </div>
         <div class="postInnerContainer">
             <div class="postContent">
@@ -22,9 +22,9 @@
                     <p>by Pupkin, Vasya</p>
                     <p class="date">Nov 15, 1:36PM</p>
                     <div class="socialSharing">
-                        <a href="https://twitter.com/"><img id="socialNetwork" src="./img/twitter.png"></a>
-                        <a href="https://facebook.com"><img id="socialNetwork" src="./img/facebook.png"></a>
-                        <a href="https://linkedin.com"><img id="socialNetwork" src="./img/linkedin.png"></a>
+                        <a href="https://twitter.com/"><img class="socialNetworkLogo" src="./img/twitter.png" alt="twitter logo"></a>
+                        <a href="https://facebook.com"><img class="socialNetworkLogo" src="./img/facebook.png" alt="facebook logo"></a>
+                        <a href="https://linkedin.com"><img class="socialNetworkLogo" src="./img/linkedin.png"  alt="linkedin logo"></a>
                     </div>
                 </div>
                 <div class="postOpening">
@@ -52,12 +52,13 @@
                 <div class="postClosure">
                     <h4>Closure</h4>
                     <p>lla, sollicitudin semper tempus eu, malesuada eget leo. In hac habitasse platea dictumst. Nulla molestie ante ex, vitae dapibus mauris consectetur in. Nam viverra turpis eu mi lacinia tincidunt. Vestibulum a libero nisl. Phasellus commodo ac metus ac mattis. Maecenas nec sagittis dui. Cras ut accumsan augue, sed tempor eros. Praesent dui diam, mattis nec auctor pretium, molestie quis lacus</p>
-                    <div class="homeRedir"><a href="./index.html"><button id="morePosts">More Posts</button></a></div>
+                    <!-- I cheated here a bit and used onclick event here - but the "pure" css way to do with would be to make a class for a tag and style it as a block -->
+                    <div class="homeRedir"><button class="morePosts" onclick="window.location.href='./index.html';">More Posts</button></div>
                 </div>
             </div>
             <div class="archive">
                 <h3>Archives</h3>
-                <ul></ul>
+                <ul>
                     <li><a href="./post_missing.html">January 2020</a></li>
                     <li><a href="./post_missing.html">February 2020</a></li>
                     <li><a href="./post_missing.html">March 2020</a></li>
