@@ -11,10 +11,10 @@
 
 .postInnerContainer {
     display: grid;
-    grid-template-columns: 1fr 15vw;
+    grid-template-columns: 1fr 1fr;
     padding: 10px;
     grid-template-areas: 
-    "main main main main main archive";
+    "main main main main main addcontent";
 }
 
 .postContent {
@@ -55,6 +55,12 @@
     align-items: center;
 }
 
+.caption {
+    margin-top: 5px;
+    font-size: 0.8em;
+    font-family: RobotoItalic;
+}
+
 #bodyImg {
     width: 80%;
     margin: auto;
@@ -72,9 +78,45 @@
     align-items: center;
 }
 
-.archive {
+.addContent {
     padding: 10px;
-    grid-area: archive;
+    grid-area: addcontent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    align-content: start;
+}
+
+.aboutAuthor {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.authorAvatar {
+    width: 100px;
+    margin-left: 15px;
+}
+
+#authorName {
+    margin-left: 15px;
+    font-size: 0.9em;
+}
+
+#authorJobTitle {
+    margin-left: 15px; 
+    font-size: 0.9em;
+}
+
+#authorDescription {
+    margin-left: 15px;
+    font-size: 0.9em;
+    font-family: RobotoItalic;
+}
+
+.archive {
+    /* grid-area: addcontent; */
+    float: left;
 }
 
 .morePosts {
@@ -94,22 +136,71 @@
     cursor: pointer;
 }
 
-@media(max-width: 600px) {
-    /* hiding archive for smaller screens */
+@media(max-width: 360px) {
+/* the smallest screens only have post content */
+    .postInnerContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        grid-template-areas: 
+        "main"
+        "addcontent";
+    }
+
+    .addContent {
+        display: none;
+    }
+
+    .morePosts {
+        width: 30vw;
+    }
+
+}
+
+@media(min-width: 360px) and (max-width: 600px) {
+/* hiding only archive for smaller screens */
+    .postInnerContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        grid-template-areas: 
+        "main"
+        "addcontent";
+    }
+
     .archive {
         display: none;
         padding: 10px;
     }
+
+    .morePosts {
+        width: 25vw;
+    }
+
 }
 
 @media(min-width: 600px) and (max-width: 1200px){
-    #morePosts {
-        width: 12vw;
+    .morePosts {
+        width: 18vw;
+    }
+
+    .aboutAuthor {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width:170px;
     }
 }
 
 @media(min-width: 1200px){
-    #morePosts {
+    .morePosts {
         width: 10vw;
+    }
+
+    .aboutAuthor {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width:200px;
     }
 }
